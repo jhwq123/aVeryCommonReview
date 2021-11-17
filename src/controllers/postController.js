@@ -3,7 +3,7 @@ import User from "../models/User";
 import comment from "../models/Comment"
 
 export const home = async (req, res) => {
-    const posts = await VideoPlaybackQuality.find({}).sort({ createAt: "desc" }).populate("owner";
+    const posts = await VideoPlaybackQuality.find({}).sort({ createAt: "desc" }).populate("owner");
     return res.render("home", { pageTitle: "Home", posts });
 };
 
