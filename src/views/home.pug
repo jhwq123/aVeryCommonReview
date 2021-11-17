@@ -1,0 +1,9 @@
+extends base
+include mixins/post
+
+block content
+    div.post-grid
+        each number in posts
+            +post(number)
+        else
+            span.empty__message No posts found
