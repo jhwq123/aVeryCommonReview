@@ -8,7 +8,7 @@
     "build": "npm run build:server && npm run build:assets",
     "build:server": "babel src -d build",
     "build:assets": "webpack --mode=production",
-    "dev:server": "nodemon",
+    "dev:server": "nodemon --exec babel-node src/init.js",
     "dev:assets": "webpack --mode=development -w"
   },
   "repository": {
